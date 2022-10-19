@@ -73,18 +73,17 @@ function init() {
     100 // far plane
   );
 
-  /*
-  // If you want to use perspective camera instead, uncomment these lines
+
   camera = new THREE.PerspectiveCamera(
-    45, // field of view
+    100, // field of view
     aspect, // aspect ratio
     1, // near plane
     100 // far plane
   );
-  */
+
 
   camera.position.set(4, 4, 4);
-  camera.lookAt(0, 0, 0);
+  camera.lookAt(3, 3, 3);
 
   scene = new THREE.Scene();
 
@@ -95,7 +94,7 @@ function init() {
   addLayer(-10, 0, originalBoxSize, originalBoxSize, "x");
 
   // Set up lights
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
   scene.add(ambientLight);
 
   const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
